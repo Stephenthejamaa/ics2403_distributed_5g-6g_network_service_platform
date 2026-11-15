@@ -1,0 +1,6 @@
+model,weighted_score,equal_weight_score,rank_weighted
+Host-based,0.2035,0.186,5
+Workstation,0.2644,0.3796,3
+Server-based (baseline),0.2309,0.2837,4
+Processor pool,0.8238,0.7402,2
+Integrated (proposed),0.8464,0.7633,1

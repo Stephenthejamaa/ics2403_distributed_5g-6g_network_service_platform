@@ -1,0 +1,26 @@
+model,crashed_node,success_rate,completed,errors,rejected
+Host-based,edge-1,1.0,300,0,0
+Host-based,edge-2,1.0,300,0,0
+Host-based,ran-1,1.0,300,0,0
+Host-based,core-1,1.0,300,0,0
+Host-based,cloud-1,0.3033,91,12,197
+Workstation,edge-1,0.67,201,3,96
+Workstation,edge-2,0.6233,187,4,109
+Workstation,ran-1,0.9933,298,0,2
+Workstation,core-1,1.0,300,0,0
+Workstation,cloud-1,0.99,297,0,3
+Server-based (baseline),edge-1,0.98,294,2,4
+Server-based (baseline),edge-2,0.9867,296,1,3
+Server-based (baseline),ran-1,0.76,228,4,68
+Server-based (baseline),core-1,0.9933,298,0,2
+Server-based (baseline),cloud-1,0.9933,298,0,2
+Processor pool,edge-1,1.0,300,0,0
+Processor pool,edge-2,1.0,300,0,0
+Processor pool,ran-1,1.0,300,0,0
+Processor pool,core-1,0.9967,299,0,1
+Processor pool,cloud-1,1.0,300,0,0
+Integrated (proposed),edge-1,1.0,300,0,0
+Integrated (proposed),edge-2,1.0,300,0,0
+Integrated (proposed),ran-1,1.0,300,0,0
+Integrated (proposed),core-1,0.9967,299,0,1
+Integrated (proposed),cloud-1,0.9967,299,0,1

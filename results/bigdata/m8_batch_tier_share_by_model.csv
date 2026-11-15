@@ -1,0 +1,13 @@
+model,tier,requests,share_of_model_requests
+host_based,cloud,100000,1.0
+integrated,cloud,14957,0.1496
+integrated,core,19631,0.1963
+integrated,edge,45062,0.4506
+integrated,ran,20350,0.2035
+processor_pool,cloud,27796,0.278
+processor_pool,core,24471,0.2447
+processor_pool,edge,33447,0.3345
+processor_pool,ran,14286,0.1429
+server_based,edge,70072,0.7007
+server_based,ran,29928,0.2993
+workstation,edge,100000,1.0

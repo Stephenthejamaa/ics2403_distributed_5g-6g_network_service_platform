@@ -1,0 +1,13 @@
+metric,value
+initial_leader,cloud-1
+detected_as,crash
+detection_time_s,0.208
+reelected_leader,core-1
+reelection_seconds_after_crash,0.21
+reelection_rounds,4
+reelection_messages,10
+reelection_consistent,True
+restart_seconds,0.102
+leader_reclaimed_by,cloud-1
+reclaim_seconds_after_crash,0.416
+final_leader_consistent,True

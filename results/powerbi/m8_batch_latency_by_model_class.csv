@@ -1,0 +1,16 @@
+model,service_class,requests,mean_latency_ms,p95_latency_ms,sla_compliance,transport_cost_per_1k_requests
+Host-based,URLLC,19889,40.02,49.0,0.498,0.25
+Host-based,eMBB,29928,105.15,140.9,0.0,0.25
+Host-based,mMTC,50183,34.98,39.5,1.0,0.25
+Integrated (proposed),URLLC,19889,18.44,28.2,0.9923,0.0342
+Integrated (proposed),eMBB,29928,89.72,128.7,0.0,0.0957
+Integrated (proposed),mMTC,50183,18.1,36.8,1.0,0.0812
+Processor pool,URLLC,19889,25.73,46.6,0.8511,0.1071
+Processor pool,eMBB,29928,91.67,132.2,0.0,0.1152
+Processor pool,mMTC,50183,20.34,38.0,1.0,0.1036
+Server-based (baseline),URLLC,19889,17.02,26.0,1.0,0.02
+Server-based (baseline),eMBB,29928,85.15,120.9,0.0,0.05
+Server-based (baseline),mMTC,50183,11.98,16.5,1.0,0.02
+Workstation,URLLC,19889,17.02,26.0,1.0,0.02
+Workstation,eMBB,29928,82.15,117.9,0.0,0.02
+Workstation,mMTC,50183,11.98,16.5,1.0,0.02

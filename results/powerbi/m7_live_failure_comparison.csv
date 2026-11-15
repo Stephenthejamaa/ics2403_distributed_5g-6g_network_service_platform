@@ -1,0 +1,11 @@
+failure_type,fault_tolerance,client_mode,total_requests,failed_requests,incorrect_results_accepted,availability,correct_service_ratio,client_visible_downtime_s,detection_time_s,detected_as,node_mttr_s,requests_needing_failover,messages_per_request,p95_latency_ms
+crash,none,single,200,80,0,0.6,0.6,2.0,,,2.004,0,1.0,5.908
+crash,with FT,failover,200,0,0,1.0,1.0,0.0,0.241,crash,0.443,10,1.05,6.099
+omission,none,single,200,80,0,0.6,0.6,2.0,,,,0,1.0,5.905
+omission,with FT,failover,200,0,0,1.0,1.0,0.0,0.694,timeout,,28,1.14,255.893
+delay,none,single,200,80,0,0.6,0.6,2.0,,,,0,1.0,5.748
+delay,with FT,failover,200,0,0,1.0,1.0,0.0,0.7,timeout,,28,1.14,256.005
+service_down,none,single,200,80,0,0.6,0.6,2.0,,,,0,1.0,5.685
+service_down,with FT,failover,200,0,0,1.0,1.0,0.0,0.251,service_failure,,11,1.05,5.831
+byzantine,none,single,200,0,80,1.0,0.6,0.0,,,,0,1.0,5.865
+byzantine,with FT,quorum,200,0,0,1.0,1.0,0.0,0.006,dissenting replica: edge-1,,0,3.0,6.632

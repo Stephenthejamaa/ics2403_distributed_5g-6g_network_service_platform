@@ -1,0 +1,355 @@
+{
+  "n_rows": 100000,
+  "m7_batch": {
+    "technology": "Apache Spark (PySpark, local[*] mode)",
+    "total_rows_processed": 100000,
+    "spark_partitions_used": 8,
+    "detector_params": {
+      "interval_s": 0.1,
+      "probe_timeout_s": 0.15,
+      "misses": 3,
+      "instant_probe_s": 0.002,
+      "rate_hz": 40,
+      "client_timeout_s": 0.25
+    },
+    "by_failure_type": [
+      {
+        "failure_type": "crash",
+        "events": 29758,
+        "mean_detection_s": 0.2562,
+        "p50_detection_s": 0.2562,
+        "p95_detection_s": 0.3012,
+        "p99_detection_s": 0.305,
+        "mean_failover_requests": 10.246,
+        "mean_wasted_client_s_with_ft": 0.0,
+        "mean_downtime_s_without_ft": 1.9858,
+        "mean_corrupted_results_without_ft": 0.0
+      },
+      {
+        "failure_type": "delay",
+        "events": 25022,
+        "mean_detection_s": 0.6999,
+        "p50_detection_s": 0.7001,
+        "p95_detection_s": 0.7452,
+        "p99_detection_s": 0.7489,
+        "mean_failover_requests": 27.998,
+        "mean_wasted_client_s_with_ft": 6.9994,
+        "mean_downtime_s_without_ft": 2.0013,
+        "mean_corrupted_results_without_ft": 0.0
+      },
+      {
+        "failure_type": "service_down",
+        "events": 20048,
+        "mean_detection_s": 0.2558,
+        "p50_detection_s": 0.2555,
+        "p95_detection_s": 0.3011,
+        "p99_detection_s": 0.305,
+        "mean_failover_requests": 10.233,
+        "mean_wasted_client_s_with_ft": 0.0,
+        "mean_downtime_s_without_ft": 1.9612,
+        "mean_corrupted_results_without_ft": 0.0
+      },
+      {
+        "failure_type": "omission",
+        "events": 15204,
+        "mean_detection_s": 0.7001,
+        "p50_detection_s": 0.7001,
+        "p95_detection_s": 0.7447,
+        "p99_detection_s": 0.7489,
+        "mean_failover_requests": 28.006,
+        "mean_wasted_client_s_with_ft": 7.0015,
+        "mean_downtime_s_without_ft": 1.9748,
+        "mean_corrupted_results_without_ft": 0.0
+      },
+      {
+        "failure_type": "byzantine",
+        "events": 9968,
+        "mean_detection_s": 0.0126,
+        "p50_detection_s": 0.0126,
+        "p95_detection_s": 0.0238,
+        "p99_detection_s": 0.0247,
+        "mean_failover_requests": 0.0,
+        "mean_wasted_client_s_with_ft": 0.0,
+        "mean_downtime_s_without_ft": 0.0,
+        "mean_corrupted_results_without_ft": 79.759
+      }
+    ]
+  },
+  "m8_batch": {
+    "technology": "Apache Spark (PySpark, local[*] mode)",
+    "trace_rows": 100000,
+    "total_rows_processed": 500000,
+    "spark_partitions_used": 8,
+    "by_model_class": [
+      {
+        "model": "host_based",
+        "service_class": "URLLC",
+        "requests": 19889,
+        "mean_latency_ms": 40.02,
+        "p95_latency_ms": 49.0,
+        "sla_compliance": 0.498,
+        "transport_cost_per_1k_requests": 0.25
+      },
+      {
+        "model": "host_based",
+        "service_class": "eMBB",
+        "requests": 29928,
+        "mean_latency_ms": 105.15,
+        "p95_latency_ms": 140.9,
+        "sla_compliance": 0.0,
+        "transport_cost_per_1k_requests": 0.25
+      },
+      {
+        "model": "host_based",
+        "service_class": "mMTC",
+        "requests": 50183,
+        "mean_latency_ms": 34.98,
+        "p95_latency_ms": 39.5,
+        "sla_compliance": 1.0,
+        "transport_cost_per_1k_requests": 0.25
+      },
+      {
+        "model": "integrated",
+        "service_class": "URLLC",
+        "requests": 19889,
+        "mean_latency_ms": 18.44,
+        "p95_latency_ms": 28.2,
+        "sla_compliance": 0.9923,
+        "transport_cost_per_1k_requests": 0.0342
+      },
+      {
+        "model": "integrated",
+        "service_class": "eMBB",
+        "requests": 29928,
+        "mean_latency_ms": 89.72,
+        "p95_latency_ms": 128.7,
+        "sla_compliance": 0.0,
+        "transport_cost_per_1k_requests": 0.0957
+      },
+      {
+        "model": "integrated",
+        "service_class": "mMTC",
+        "requests": 50183,
+        "mean_latency_ms": 18.1,
+        "p95_latency_ms": 36.8,
+        "sla_compliance": 1.0,
+        "transport_cost_per_1k_requests": 0.0812
+      },
+      {
+        "model": "processor_pool",
+        "service_class": "URLLC",
+        "requests": 19889,
+        "mean_latency_ms": 25.73,
+        "p95_latency_ms": 46.6,
+        "sla_compliance": 0.8511,
+        "transport_cost_per_1k_requests": 0.1071
+      },
+      {
+        "model": "processor_pool",
+        "service_class": "eMBB",
+        "requests": 29928,
+        "mean_latency_ms": 91.67,
+        "p95_latency_ms": 132.2,
+        "sla_compliance": 0.0,
+        "transport_cost_per_1k_requests": 0.1152
+      },
+      {
+        "model": "processor_pool",
+        "service_class": "mMTC",
+        "requests": 50183,
+        "mean_latency_ms": 20.34,
+        "p95_latency_ms": 38.0,
+        "sla_compliance": 1.0,
+        "transport_cost_per_1k_requests": 0.1036
+      },
+      {
+        "model": "server_based",
+        "service_class": "URLLC",
+        "requests": 19889,
+        "mean_latency_ms": 17.02,
+        "p95_latency_ms": 26.0,
+        "sla_compliance": 1.0,
+        "transport_cost_per_1k_requests": 0.02
+      },
+      {
+        "model": "server_based",
+        "service_class": "eMBB",
+        "requests": 29928,
+        "mean_latency_ms": 85.15,
+        "p95_latency_ms": 120.9,
+        "sla_compliance": 0.0,
+        "transport_cost_per_1k_requests": 0.05
+      },
+      {
+        "model": "server_based",
+        "service_class": "mMTC",
+        "requests": 50183,
+        "mean_latency_ms": 11.98,
+        "p95_latency_ms": 16.5,
+        "sla_compliance": 1.0,
+        "transport_cost_per_1k_requests": 0.02
+      },
+      {
+        "model": "workstation",
+        "service_class": "URLLC",
+        "requests": 19889,
+        "mean_latency_ms": 17.02,
+        "p95_latency_ms": 26.0,
+        "sla_compliance": 1.0,
+        "transport_cost_per_1k_requests": 0.02
+      },
+      {
+        "model": "workstation",
+        "service_class": "eMBB",
+        "requests": 29928,
+        "mean_latency_ms": 82.15,
+        "p95_latency_ms": 117.9,
+        "sla_compliance": 0.0,
+        "transport_cost_per_1k_requests": 0.02
+      },
+      {
+        "model": "workstation",
+        "service_class": "mMTC",
+        "requests": 50183,
+        "mean_latency_ms": 11.98,
+        "p95_latency_ms": 16.5,
+        "sla_compliance": 1.0,
+        "transport_cost_per_1k_requests": 0.02
+      }
+    ],
+    "tier_share": [
+      {
+        "model": "host_based",
+        "tier": "cloud",
+        "requests": 100000,
+        "share_of_model_requests": 1.0
+      },
+      {
+        "model": "integrated",
+        "tier": "cloud",
+        "requests": 14957,
+        "share_of_model_requests": 0.1496
+      },
+      {
+        "model": "integrated",
+        "tier": "core",
+        "requests": 19631,
+        "share_of_model_requests": 0.1963
+      },
+      {
+        "model": "integrated",
+        "tier": "edge",
+        "requests": 45062,
+        "share_of_model_requests": 0.4506
+      },
+      {
+        "model": "integrated",
+        "tier": "ran",
+        "requests": 20350,
+        "share_of_model_requests": 0.2035
+      },
+      {
+        "model": "processor_pool",
+        "tier": "cloud",
+        "requests": 27796,
+        "share_of_model_requests": 0.278
+      },
+      {
+        "model": "processor_pool",
+        "tier": "core",
+        "requests": 24471,
+        "share_of_model_requests": 0.2447
+      },
+      {
+        "model": "processor_pool",
+        "tier": "edge",
+        "requests": 33447,
+        "share_of_model_requests": 0.3345
+      },
+      {
+        "model": "processor_pool",
+        "tier": "ran",
+        "requests": 14286,
+        "share_of_model_requests": 0.1429
+      },
+      {
+        "model": "server_based",
+        "tier": "edge",
+        "requests": 70072,
+        "share_of_model_requests": 0.7007
+      },
+      {
+        "model": "server_based",
+        "tier": "ran",
+        "requests": 29928,
+        "share_of_model_requests": 0.2993
+      },
+      {
+        "model": "workstation",
+        "tier": "edge",
+        "requests": 100000,
+        "share_of_model_requests": 1.0
+      }
+    ]
+  },
+  "availability_projection": [
+    {
+      "strategy": "no fault tolerance",
+      "assumed_faults_per_hour": 6,
+      "mean_client_downtime_s_per_fault": 1.7851,
+      "projected_availability": 0.997025,
+      "corrupted_results_per_hour": 47.7,
+      "slow_client_seconds_per_hour": 0.0
+    },
+    {
+      "strategy": "replication + failover + quorum",
+      "assumed_faults_per_hour": 6,
+      "mean_client_downtime_s_per_fault": 0.0,
+      "projected_availability": 1.0,
+      "corrupted_results_per_hour": 0.0,
+      "slow_client_seconds_per_hour": 16.895
+    }
+  ],
+  "model_validation": [
+    {
+      "failure_type": "crash",
+      "predicted_mean_detection_s": 0.2562,
+      "measured_detection_s": 0.241,
+      "detection_abs_error_s": 0.015,
+      "predicted_mean_failover_requests": 10.246,
+      "measured_failover_requests": 10
+    },
+    {
+      "failure_type": "delay",
+      "predicted_mean_detection_s": 0.6999,
+      "measured_detection_s": 0.7,
+      "detection_abs_error_s": 0.0,
+      "predicted_mean_failover_requests": 27.998,
+      "measured_failover_requests": 28
+    },
+    {
+      "failure_type": "service_down",
+      "predicted_mean_detection_s": 0.2558,
+      "measured_detection_s": 0.251,
+      "detection_abs_error_s": 0.005,
+      "predicted_mean_failover_requests": 10.233,
+      "measured_failover_requests": 11
+    },
+    {
+      "failure_type": "omission",
+      "predicted_mean_detection_s": 0.7001,
+      "measured_detection_s": 0.694,
+      "detection_abs_error_s": 0.006,
+      "predicted_mean_failover_requests": 28.006,
+      "measured_failover_requests": 28
+    },
+    {
+      "failure_type": "byzantine",
+      "predicted_mean_detection_s": 0.0126,
+      "measured_detection_s": 0.006,
+      "detection_abs_error_s": 0.007,
+      "predicted_mean_failover_requests": 0.0,
+      "measured_failover_requests": 0
+    }
+  ]
+}

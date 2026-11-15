@@ -1,0 +1,6 @@
+failure_type,predicted_mean_detection_s,measured_detection_s,detection_abs_error_s,predicted_mean_failover_requests,measured_failover_requests
+crash,0.2562,0.241,0.015,10.246,10
+delay,0.6999,0.7,0.0,27.998,28
+service_down,0.2558,0.251,0.005,10.233,11
+omission,0.7001,0.694,0.006,28.006,28
+byzantine,0.0126,0.006,0.007,0.0,0

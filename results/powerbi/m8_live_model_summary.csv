@@ -1,0 +1,6 @@
+model,mean_latency_ms,p95_latency_ms,urllc_latency_ms,throughput_per_s,success_rate_nominal,utilization_of_provisioned_capacity,load_balance_jain_index,scalability_index,throughput_at_10_clients,throughput_at_40_clients,success_at_40_clients,reliability_avg_under_node_crash,reliability_worst_case,provisioned_cost_per_hour,total_cost_per_1k_requests
+Host-based,69.77,155.55,43.5,172.39,1.0,0.3963,1.0,0.4239,139.93,242.9,0.9767,0.8607,0.3033,0.8,0.2513
+Workstation,78.49,430.73,22.25,162.19,0.9933,0.7668,0.9996,0.2817,141.53,167.84,0.95,0.8553,0.6233,0.96,0.0216
+Server-based (baseline),88.79,436.7,17.4,151.52,0.9933,0.3843,0.4702,0.2737,148.35,172.49,0.9417,0.9427,0.76,1.5,0.0308
+Processor pool,40.99,114.82,26.22,334.28,1.0,0.3241,0.9586,0.6142,174.26,428.13,1.0,0.9993,0.9967,2.86,0.1104
+Integrated (proposed),37.85,112.82,19.09,357.0,1.0,0.3446,0.9087,0.5385,202.16,436.19,0.9983,0.9987,0.9967,2.86,0.0766
