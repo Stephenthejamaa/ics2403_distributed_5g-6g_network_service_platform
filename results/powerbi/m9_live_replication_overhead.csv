@@ -1,0 +1,6 @@
+configuration,copies,put_mean_ms,put_p95_ms,get_mean_ms,get_p95_ms,messages_per_put,messages_per_get,divergent_keys
+direct physical access (no transparency),1,0.086,0.143,0.083,0.139,1,1.0,0
+"transparent, 1 copy (native format)",1,0.093,0.15,0.088,0.148,1,1.0,0
+"transparent, 1 copy (legacy format)",1,0.097,0.153,0.093,0.15,1,1.0,0
+"transparent, 2 copies",2,0.246,0.363,0.09,0.145,2,1.0,0
+"transparent, 3 copies",3,0.411,0.536,0.089,0.149,3,1.0,0

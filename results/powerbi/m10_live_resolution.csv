@@ -1,0 +1,6 @@
+scheme,mean_latency_us,p95_latency_us,exchanges_per_lookup,cache_hit_rate,lookups_per_second_16_clients,stale_right_after_move,stale_after_update,stale_after_ttl,update_exchanges_per_move,resolution_success_when_core1_dead
+Static map,0.1,0.1,0.0,,3432804,1.0,0.0,0.0,10.0,1.0
+Broadcast,671.1,847.4,5.0,,1533,0.0,0.0,0.0,0.0,0.902
+Central name server,81.5,130.6,1.0,,12566,1.0,0.0,0.0,1.0,0.0
+Prefix table (zones),97.3,163.4,1.0,,10114,1.0,0.0,0.0,1.0,0.902
+DNS-style (root + cache),21.6,103.7,0.219,0.782,45444,1.0,0.5,0.0,1.0,0.954

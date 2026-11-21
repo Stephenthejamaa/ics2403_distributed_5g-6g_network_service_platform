@@ -1,0 +1,7 @@
+keys,stop_the_world_freeze_s,stw_blocked_writes,stw_blocked_share_of_writes,stw_max_write_delay_s,stw_p999_write_delay_s,live_migration_duration_s,live_extra_messages,live_blocked_writes
+2000,0.023,0,0.0,0.0,0.0,0.08,2,0
+10000,0.115,4,0.00013,0.09,0.0,0.4,20,0
+40000,0.458,23,0.00076,0.434,0.0,1.6,82,0
+100000,1.146,57,0.00189,1.121,0.4121,4.0,206,0
+500000,5.731,307,0.0102,5.706,4.9968,20.0,1035,0
+2000000,22.923,1184,0.03933,22.898,22.1891,80.0,4096,0

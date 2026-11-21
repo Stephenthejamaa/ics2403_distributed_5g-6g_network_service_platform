@@ -1,0 +1,7 @@
+access_method,node,wire_format,successful_records,of_records
+physical addressing (no transparency),edge-1,native,100,100
+physical addressing (no transparency),edge-2,native,100,100
+physical addressing (no transparency),ran-1,legacy only,0,100
+transparent (access adapter),edge-1,native,100,100
+transparent (access adapter),edge-2,native,100,100
+transparent (access adapter),ran-1,legacy,100,100

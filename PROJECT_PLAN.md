@@ -12,8 +12,8 @@ core-1, cloud-1`) introduced in Milestone 1. Nothing is rebuilt from scratch.
 | **Assignment 1** | M1 Distributed OS Foundation, M2 Processing & Performance | ✅ **Done** — `assignment1_m1_m2/` |
 | **Assignment 2** | M3 Distributed Architecture, M4 Algorithms & Coordination | ✅ **Done** — `assignment2_m3_m4/` |
 | **Assignment 3** | M5 Distributed Transactions, M6 Concurrency & Deadlock | ✅ **Done** — `assignment3_m5_m6/` |
-| **Practical 1** | M7 Fault Tolerance & Recovery, M8 Distributed System Models | ⏳ Not started |
-| **Practical 2** | M9 Transparency & Reliability, M10 Naming & Process Mgmt | ⏳ Not started |
+| **Practical 1** | M7 Fault Tolerance & Recovery, M8 Distributed System Models | ✅ **Done** — `practical1_m7_m8/` |
+| **Practical 2** | M9 Transparency & Reliability, M10 Naming & Process Mgmt | ✅ **Done** — `practical2_m9_m10/` |
 | **Practical 3** | M11 RPC & Distributed Shared Memory, M12 Distributed File System / Capstone | ⏳ Not started |
 | **CAT 1** | Technical report, M1–M12 (30-section structure from the brief) | ⏳ Not started (assemble once all milestones exist) |
 | **CAT 2** | Conference-style research paper (derived from CAT 1, kept concise) | ⏳ Not started |
@@ -29,6 +29,12 @@ core-1, cloud-1`) introduced in Milestone 1. Nothing is rebuilt from scratch.
 │   ├── process_manager.py         # process creation, FIFO/priority scheduling
 │   ├── communication.py           # TCP + length-prefixed JSON transport
 │   ├── topology.py                # the ONE topology every milestone reuses
+│   ├── cluster.py                 # start / kill / restart node processes (M7, M8)
+│   ├── fault_tolerance.py         # fault injector, failure detector, replication, supervisor (M7)
+│   ├── system_models.py           # the five distributed-system models + scorecard (M8)
+│   ├── transparency.py            # logical resources: access/location/replication/migration/failure (M9)
+│   ├── naming.py                  # five name-resolution architectures (M10)
+│   ├── process_mgmt.py            # scheduler + distributed process manager (M10)
 │   ├── workload_generator.py      # URLLC/eMBB/mMTC synthetic telecom workload
 │   └── performance_monitor.py     # throughput/latency/jitter/loss/bottleneck metrics
 ├── assignment1_m1_m2/             # ✅ done
@@ -48,7 +54,19 @@ core-1, cloud-1`) introduced in Milestone 1. Nothing is rebuilt from scratch.
 │   ├── assignment3_bigdata_extension.py   # Spark batch layer + Power BI CSV exports (m5_/m6_ files)
 │   ├── ASSIGNMENT3_REPORT.md      # deliverables write-up + presentation summary
 │   └── results/                   # this assignment's own JSON logs only
-├── practical1_m7_m8/               # next
+├── practical1_m7_m8/              # ✅ done (+ Big Data / Power BI extension)
+│   ├── milestone7_fault_tolerance.py
+│   ├── milestone8_system_models.py
+│   ├── practical1_bigdata_extension.py    # Spark batch layer + Power BI CSV exports (m7_/m8_ files)
+│   ├── PRACTICAL1_REPORT.md       # deliverables write-up + presentation summary
+│   └── results/                   # real JSON output from running the scripts
+├── practical2_m9_m10/             # ✅ done (+ Big Data / Power BI extension)
+│   ├── milestone9_transparency.py
+│   ├── milestone10_naming_process.py
+│   ├── practical2_bigdata_extension.py    # Spark batch layer + Power BI CSV exports (m9_/m10_ files)
+│   ├── PRACTICAL2_REPORT.md       # deliverables write-up + presentation summary
+│   └── results/                   # real JSON output from running the scripts
+├── practical3_m11_m12/             # next
 ├── practical2_m9_m10/
 ├── practical3_m11_m12/
 ├── cat1_technical_report/
@@ -97,17 +115,21 @@ Practical 1 onward will follow this exact same naming convention
   locks) + `common/deadlock_detector.py` (distributed wait-for graph, cycle
   detection, victim-based recovery). Race condition vs mutual exclusion
   demonstrated directly.
-* **M7 (Fault tolerance):** Milestone 5 already killed a node process
-  on-demand as an experiment; M7 will formalize this into automatic
-  failure DETECTION (rather than us manually calling `.terminate()`) plus
-  MTTR/availability measurement, reusing the same node-as-OS-process design
-  from M1 and the Bully re-election already built in M4.
-* **M8 (Models):** re-run the M2 performance harness under host-based /
-  processor-pool / server-based configurations of the same topology.
-* **M9 (Transparency):** add a location/failure-transparent proxy in front of
-  the existing node addresses.
-* **M10 (Naming):** replace hardcoded `NODE_ADDR` lookups with a name-server
-  node.
+* **M7 (Fault tolerance):** ✅ done — `common/fault_tolerance.py` (fault injector for
+  5 failure types, heartbeat detector, replicated client with failover and quorum
+  voting, supervisor that restarts nodes and re-elects the leader with the M4 Bully
+  algorithm) and `common/cluster.py` (real crash + restart of node OS processes).
+* **M8 (Models):** ✅ done — `common/system_models.py`: the five distributed-system
+  models as placement policies on the SAME platform; server_based = the Assignment 1-3
+  baseline, integrated = the proposed improvement (Section 6 of the brief).
+
+* **M9 (Transparency):** ✅ done — `common/transparency.py`: a logical "subscriber database"
+  with access adapters (legacy wire format), a location directory, replication with a version rule,
+  live migration, and failure masking with automatic repair. The versioned key-value store now
+  on every node is the "distributed state" that M11 will build on.
+* **M10 (Naming + processes):** ✅ done — `common/naming.py` (static map, broadcast, name server,
+  prefix table, DNS-style) and `common/process_mgmt.py` (scheduler + create/locate/coordinate/terminate,
+  atomic group start with the M5 Two-Phase Commit, make-before-break moves, respawn via the M7 detector).
 * **M11 (RPC/DSM):** formalize `communication.py`'s framing into a proper
   client-stub/server-stub RPC layer; add a shared distributed state store.
 * **M12 (Capstone):** add a storage layer (simple distributed KV/file store)

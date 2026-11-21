@@ -1,0 +1,3 @@
+phase,served_by_node,reads_served,correct_reads_in_phase,records_written,machine_names_in_application_code,directory_lookup_us
+before relocation,edge-2,60,60,60,0,0.53
+after relocation,cloud-1,60,60,60,0,0.53

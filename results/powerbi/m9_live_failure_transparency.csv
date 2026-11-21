@@ -1,0 +1,3 @@
+client,operations,failed_operations,availability,lost_reads,stale_reads,p95_latency_ms,max_latency_ms,restart_seconds,keys_on_restarted_node,repair_seconds,keys_repaired,divergent_keys_after_repair,full_redundancy_restored_after_s
+physical (bound to edge-1),280,100,0.6429,85,0,0.431,1.02,0.102,36,,0,,
+transparent (replicated + failover + repair),280,0,1.0,0,0,1.22,3.751,0.004,200,0.001,200,0,2.505

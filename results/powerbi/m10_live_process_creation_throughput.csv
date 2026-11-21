@@ -1,0 +1,4 @@
+concurrent_creators,lifecycles_per_second,completed,failed
+1,2053.5,25,0
+4,1880.6,100,0
+16,1809.9,400,0

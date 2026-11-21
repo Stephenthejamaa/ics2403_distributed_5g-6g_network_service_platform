@@ -1,0 +1,6 @@
+scenario,outcome,success,duration_s,failed_locates,processes_affected,resources_leaked
+group start (Two-Phase Commit),started,True,0.00076,0,3,False
+group start forced to abort (a node votes no),aborted,True,,0,0,False
+move process: make-before-break,moved,True,0.051,0,1,False
+move process: break-before-make,moved,False,0.051,22,1,False
+node crash: automatic respawn,restored,True,0.209,0,3,False

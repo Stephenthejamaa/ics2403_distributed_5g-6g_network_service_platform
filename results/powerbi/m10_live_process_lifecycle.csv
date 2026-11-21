@@ -1,0 +1,7 @@
+stage,mean_ms,p95_ms,samples
+create,0.001,0.001,200
+schedule,0.006,0.009,200
+start,0.131,0.221,200
+register,0.098,0.166,200
+locate,0.081,0.129,200
+terminate,0.202,0.304,200

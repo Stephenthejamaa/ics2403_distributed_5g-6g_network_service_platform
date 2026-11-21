@@ -1,0 +1,7 @@
+keys,mode,migration_seconds,operations_total,operations_during_migration,failed_operations,incorrect_reads,stalled_writes,max_write_latency_ms,baseline_mean_latency_ms,p95_latency_ms,records_on_new_node,divergent_keys_after,integrity_ok
+2000,stop_the_world,0.029,316,11,0,0,0,16.25,0.33,0.843,2000,0,True
+2000,live,0.08,335,29,0,0,0,1.15,0.351,0.953,2000,0,True
+10000,stop_the_world,0.1,320,20,0,0,4,101.18,0.421,0.979,10000,0,True
+10000,live,0.458,479,173,0,0,0,2.3,0.506,1.003,10000,0,True
+40000,stop_the_world,0.467,324,18,0,0,4,454.47,0.272,0.729,40000,0,True
+40000,live,2.005,1057,747,0,0,0,4.41,0.283,1.346,40000,0,True

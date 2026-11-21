@@ -1,0 +1,5 @@
+mechanism,put_overhead_ms,get_overhead_ms,extra_messages_per_put,extra_messages_per_get,note
+Location (directory lookup + client logic),0.007,0.005,0,0,compared with talking to the node directly
+Access (legacy format translation),0.004,0.005,0,0,"legacy node vs native node, 1 copy each"
+Replication (3 copies instead of 1),0.318,0.001,2,0,writes go to every copy; reads still touch only one
+Failure masking (normal operation),0.0,0.0,0,0,no cost until a failure happens; then one extra attempt per affected request

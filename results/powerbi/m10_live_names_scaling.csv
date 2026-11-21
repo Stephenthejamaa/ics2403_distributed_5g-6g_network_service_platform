@@ -1,0 +1,4 @@
+names,registration_seconds,name_server_mean_us,prefix_table_mean_us,broadcast_mean_us
+100,0.002,78.5,93.6,655.9
+1000,0.004,80.0,93.3,655.9
+10000,0.02,79.6,94.0,672.2

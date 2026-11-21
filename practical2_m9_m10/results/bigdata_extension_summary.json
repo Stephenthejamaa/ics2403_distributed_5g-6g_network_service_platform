@@ -1,0 +1,507 @@
+{
+  "n_rows": 100000,
+  "m9_batch": {
+    "technology": "Apache Spark (PySpark, local[*] mode)",
+    "operations": 100000,
+    "availability_evaluations": 1200000,
+    "migration_evaluations": 600000,
+    "stop_the_world_s_per_key_used": 1.1461538461538464e-05,
+    "live_copy_keys_per_s": 25000.0,
+    "spark_partitions_used": 8,
+    "availability_by_replication": [
+      {
+        "p_down": 0.01,
+        "replicas": 1,
+        "operations": 100000,
+        "availability": 0.99055,
+        "degraded_writes": 0,
+        "write_fully_replicated_rate": 0.99083,
+        "analytic_availability": 0.99,
+        "abs_error_vs_formula": 0.00055,
+        "repair_keys_per_hour": 0.0
+      },
+      {
+        "p_down": 0.01,
+        "replicas": 2,
+        "operations": 100000,
+        "availability": 0.99989,
+        "degraded_writes": 589,
+        "write_fully_replicated_rate": 0.9804,
+        "analytic_availability": 0.9999,
+        "abs_error_vs_formula": 1e-05,
+        "repair_keys_per_hour": 3534.0
+      },
+      {
+        "p_down": 0.01,
+        "replicas": 3,
+        "operations": 100000,
+        "availability": 1.0,
+        "degraded_writes": 886,
+        "write_fully_replicated_rate": 0.97057,
+        "analytic_availability": 1.0,
+        "abs_error_vs_formula": 0.0,
+        "repair_keys_per_hour": 5316.0
+      },
+      {
+        "p_down": 0.05,
+        "replicas": 1,
+        "operations": 100000,
+        "availability": 0.95011,
+        "degraded_writes": 0,
+        "write_fully_replicated_rate": 0.95193,
+        "analytic_availability": 0.95,
+        "abs_error_vs_formula": 0.00011,
+        "repair_keys_per_hour": 0.0
+      },
+      {
+        "p_down": 0.05,
+        "replicas": 2,
+        "operations": 100000,
+        "availability": 0.99744,
+        "degraded_writes": 2801,
+        "write_fully_replicated_rate": 0.90449,
+        "analytic_availability": 0.9975,
+        "abs_error_vs_formula": 6e-05,
+        "repair_keys_per_hour": 16806.0
+      },
+      {
+        "p_down": 0.05,
+        "replicas": 3,
+        "operations": 100000,
+        "availability": 0.99982,
+        "degraded_writes": 4266,
+        "write_fully_replicated_rate": 0.85819,
+        "analytic_availability": 0.99988,
+        "abs_error_vs_formula": 6e-05,
+        "repair_keys_per_hour": 25596.0
+      },
+      {
+        "p_down": 0.1,
+        "replicas": 1,
+        "operations": 100000,
+        "availability": 0.90103,
+        "degraded_writes": 0,
+        "write_fully_replicated_rate": 0.904,
+        "analytic_availability": 0.9,
+        "abs_error_vs_formula": 0.00103,
+        "repair_keys_per_hour": 0.0
+      },
+      {
+        "p_down": 0.1,
+        "replicas": 2,
+        "operations": 100000,
+        "availability": 0.99007,
+        "degraded_writes": 5367,
+        "write_fully_replicated_rate": 0.81218,
+        "analytic_availability": 0.99,
+        "abs_error_vs_formula": 7e-05,
+        "repair_keys_per_hour": 32202.0
+      },
+      {
+        "p_down": 0.1,
+        "replicas": 3,
+        "operations": 100000,
+        "availability": 0.99919,
+        "degraded_writes": 8121,
+        "write_fully_replicated_rate": 0.72933,
+        "analytic_availability": 0.999,
+        "abs_error_vs_formula": 0.00019,
+        "repair_keys_per_hour": 48726.0
+      },
+      {
+        "p_down": 0.2,
+        "replicas": 1,
+        "operations": 100000,
+        "availability": 0.8002,
+        "degraded_writes": 0,
+        "write_fully_replicated_rate": 0.80304,
+        "analytic_availability": 0.8,
+        "abs_error_vs_formula": 0.0002,
+        "repair_keys_per_hour": 0.0
+      },
+      {
+        "p_down": 0.2,
+        "replicas": 2,
+        "operations": 100000,
+        "availability": 0.96078,
+        "degraded_writes": 9681,
+        "write_fully_replicated_rate": 0.63914,
+        "analytic_availability": 0.96,
+        "abs_error_vs_formula": 0.00078,
+        "repair_keys_per_hour": 58086.0
+      },
+      {
+        "p_down": 0.2,
+        "replicas": 3,
+        "operations": 100000,
+        "availability": 0.99258,
+        "degraded_writes": 14484,
+        "write_fully_replicated_rate": 0.51138,
+        "analytic_availability": 0.992,
+        "abs_error_vs_formula": 0.00058,
+        "repair_keys_per_hour": 86904.0
+      }
+    ],
+    "migration_downtime": [
+      {
+        "keys": 2000,
+        "stop_the_world_freeze_s": 0.023,
+        "stw_blocked_writes": 0,
+        "stw_blocked_share_of_writes": 0.0,
+        "stw_max_write_delay_s": 0.0,
+        "stw_p999_write_delay_s": 0.0,
+        "live_migration_duration_s": 0.08,
+        "live_extra_messages": 2,
+        "live_blocked_writes": 0
+      },
+      {
+        "keys": 10000,
+        "stop_the_world_freeze_s": 0.115,
+        "stw_blocked_writes": 4,
+        "stw_blocked_share_of_writes": 0.00013,
+        "stw_max_write_delay_s": 0.09,
+        "stw_p999_write_delay_s": 0.0,
+        "live_migration_duration_s": 0.4,
+        "live_extra_messages": 20,
+        "live_blocked_writes": 0
+      },
+      {
+        "keys": 40000,
+        "stop_the_world_freeze_s": 0.458,
+        "stw_blocked_writes": 23,
+        "stw_blocked_share_of_writes": 0.00076,
+        "stw_max_write_delay_s": 0.434,
+        "stw_p999_write_delay_s": 0.0,
+        "live_migration_duration_s": 1.6,
+        "live_extra_messages": 82,
+        "live_blocked_writes": 0
+      },
+      {
+        "keys": 100000,
+        "stop_the_world_freeze_s": 1.146,
+        "stw_blocked_writes": 57,
+        "stw_blocked_share_of_writes": 0.00189,
+        "stw_max_write_delay_s": 1.121,
+        "stw_p999_write_delay_s": 0.4121,
+        "live_migration_duration_s": 4.0,
+        "live_extra_messages": 206,
+        "live_blocked_writes": 0
+      },
+      {
+        "keys": 500000,
+        "stop_the_world_freeze_s": 5.731,
+        "stw_blocked_writes": 307,
+        "stw_blocked_share_of_writes": 0.0102,
+        "stw_max_write_delay_s": 5.706,
+        "stw_p999_write_delay_s": 4.9968,
+        "live_migration_duration_s": 20.0,
+        "live_extra_messages": 1035,
+        "live_blocked_writes": 0
+      },
+      {
+        "keys": 2000000,
+        "stop_the_world_freeze_s": 22.923,
+        "stw_blocked_writes": 1184,
+        "stw_blocked_share_of_writes": 0.03933,
+        "stw_max_write_delay_s": 22.898,
+        "stw_p999_write_delay_s": 22.1891,
+        "live_migration_duration_s": 80.0,
+        "live_extra_messages": 4096,
+        "live_blocked_writes": 0
+      }
+    ]
+  },
+  "m10_batch": {
+    "technology": "Apache Spark (PySpark, local[*] mode)",
+    "lookups": 100000,
+    "dns_ttl_evaluations": 400000,
+    "scalability_evaluations": 2000000,
+    "spark_partitions_used": 8,
+    "live_parameters_used": {
+      "exchange_s": 8.15e-05,
+      "local_s": 1.0000000000000001e-07,
+      "broadcast_per_extra_node_s": 0.0001474,
+      "dns_hit_rate": 0.782
+    },
+    "dns_ttl_tradeoff": [
+      {
+        "ttl_s": 1.0,
+        "lookups": 100000,
+        "cache_misses": 91693,
+        "hit_rate": 0.0831,
+        "exchanges_per_lookup": 0.9169,
+        "stale_answers": 0,
+        "stale_answer_rate": 0.0
+      },
+      {
+        "ttl_s": 5.0,
+        "lookups": 100000,
+        "cache_misses": 78018,
+        "hit_rate": 0.2198,
+        "exchanges_per_lookup": 0.7802,
+        "stale_answers": 0,
+        "stale_answer_rate": 0.0
+      },
+      {
+        "ttl_s": 30.0,
+        "lookups": 100000,
+        "cache_misses": 59410,
+        "hit_rate": 0.4059,
+        "exchanges_per_lookup": 0.5941,
+        "stale_answers": 4,
+        "stale_answer_rate": 4e-05
+      },
+      {
+        "ttl_s": 300.0,
+        "lookups": 100000,
+        "cache_misses": 38799,
+        "hit_rate": 0.612,
+        "exchanges_per_lookup": 0.388,
+        "stale_answers": 132,
+        "stale_answer_rate": 0.00132
+      }
+    ],
+    "scalability": [
+      {
+        "scheme": "broadcast",
+        "nodes": 5,
+        "busiest_server_utilization": 0.0041,
+        "overloaded": false,
+        "update_exchanges_per_move": 0.0,
+        "mean_exchanges_per_lookup": 5.0,
+        "mean_latency_ms": 0.7604,
+        "p95_latency_ms": 1.5247,
+        "p99_latency_ms": 2.1341,
+        "exchanges_per_1000_lookups_and_10_moves": 5000.0
+      },
+      {
+        "scheme": "broadcast",
+        "nodes": 50,
+        "busiest_server_utilization": 0.0408,
+        "overloaded": false,
+        "update_exchanges_per_move": 0.0,
+        "mean_exchanges_per_lookup": 50.0,
+        "mean_latency_ms": 8.2755,
+        "p95_latency_ms": 16.5939,
+        "p99_latency_ms": 23.2267,
+        "exchanges_per_1000_lookups_and_10_moves": 50000.0
+      },
+      {
+        "scheme": "broadcast",
+        "nodes": 500,
+        "busiest_server_utilization": 0.4075,
+        "overloaded": false,
+        "update_exchanges_per_move": 0.0,
+        "mean_exchanges_per_lookup": 500.0,
+        "mean_latency_ms": 83.4513,
+        "p95_latency_ms": 167.3344,
+        "p99_latency_ms": 234.2204,
+        "exchanges_per_1000_lookups_and_10_moves": 500000.0
+      },
+      {
+        "scheme": "broadcast",
+        "nodes": 5000,
+        "busiest_server_utilization": 4.075,
+        "overloaded": true,
+        "update_exchanges_per_move": 0.0,
+        "mean_exchanges_per_lookup": 5000.0,
+        "mean_latency_ms": 843.6873,
+        "p95_latency_ms": 1691.7397,
+        "p99_latency_ms": 2367.9524,
+        "exchanges_per_1000_lookups_and_10_moves": 5000000.0
+      },
+      {
+        "scheme": "dns_style",
+        "nodes": 5,
+        "busiest_server_utilization": 0.0004,
+        "overloaded": false,
+        "update_exchanges_per_move": 1.0,
+        "mean_exchanges_per_lookup": 0.218,
+        "mean_latency_ms": 0.0201,
+        "p95_latency_ms": 0.1178,
+        "p99_latency_ms": 0.1897,
+        "exchanges_per_1000_lookups_and_10_moves": 228.0
+      },
+      {
+        "scheme": "dns_style",
+        "nodes": 50,
+        "busiest_server_utilization": 0.0036,
+        "overloaded": false,
+        "update_exchanges_per_move": 1.0,
+        "mean_exchanges_per_lookup": 0.218,
+        "mean_latency_ms": 0.0202,
+        "p95_latency_ms": 0.1181,
+        "p99_latency_ms": 0.1903,
+        "exchanges_per_1000_lookups_and_10_moves": 228.0
+      },
+      {
+        "scheme": "dns_style",
+        "nodes": 500,
+        "busiest_server_utilization": 0.0355,
+        "overloaded": false,
+        "update_exchanges_per_move": 1.0,
+        "mean_exchanges_per_lookup": 0.218,
+        "mean_latency_ms": 0.0209,
+        "p95_latency_ms": 0.1221,
+        "p99_latency_ms": 0.1966,
+        "exchanges_per_1000_lookups_and_10_moves": 228.0
+      },
+      {
+        "scheme": "dns_style",
+        "nodes": 5000,
+        "busiest_server_utilization": 0.3553,
+        "overloaded": false,
+        "update_exchanges_per_move": 1.0,
+        "mean_exchanges_per_lookup": 0.218,
+        "mean_latency_ms": 0.0312,
+        "p95_latency_ms": 0.1826,
+        "p99_latency_ms": 0.2941,
+        "exchanges_per_1000_lookups_and_10_moves": 228.0
+      },
+      {
+        "scheme": "name_server",
+        "nodes": 5,
+        "busiest_server_utilization": 0.0041,
+        "overloaded": false,
+        "update_exchanges_per_move": 1.0,
+        "mean_exchanges_per_lookup": 1.0,
+        "mean_latency_ms": 0.0927,
+        "p95_latency_ms": 0.1858,
+        "p99_latency_ms": 0.2601,
+        "exchanges_per_1000_lookups_and_10_moves": 1010.0
+      },
+      {
+        "scheme": "name_server",
+        "nodes": 50,
+        "busiest_server_utilization": 0.0408,
+        "overloaded": false,
+        "update_exchanges_per_move": 1.0,
+        "mean_exchanges_per_lookup": 1.0,
+        "mean_latency_ms": 0.0962,
+        "p95_latency_ms": 0.1929,
+        "p99_latency_ms": 0.27,
+        "exchanges_per_1000_lookups_and_10_moves": 1010.0
+      },
+      {
+        "scheme": "name_server",
+        "nodes": 500,
+        "busiest_server_utilization": 0.4075,
+        "overloaded": false,
+        "update_exchanges_per_move": 1.0,
+        "mean_exchanges_per_lookup": 1.0,
+        "mean_latency_ms": 0.1558,
+        "p95_latency_ms": 0.3124,
+        "p99_latency_ms": 0.4372,
+        "exchanges_per_1000_lookups_and_10_moves": 1010.0
+      },
+      {
+        "scheme": "name_server",
+        "nodes": 5000,
+        "busiest_server_utilization": 4.075,
+        "overloaded": true,
+        "update_exchanges_per_move": 1.0,
+        "mean_exchanges_per_lookup": 1.0,
+        "mean_latency_ms": 9.2296,
+        "p95_latency_ms": 18.5069,
+        "p99_latency_ms": 25.9044,
+        "exchanges_per_1000_lookups_and_10_moves": 1010.0
+      },
+      {
+        "scheme": "prefix_table",
+        "nodes": 5,
+        "busiest_server_utilization": 0.0016,
+        "overloaded": false,
+        "update_exchanges_per_move": 1.0,
+        "mean_exchanges_per_lookup": 1.0,
+        "mean_latency_ms": 0.0924,
+        "p95_latency_ms": 0.1854,
+        "p99_latency_ms": 0.2595,
+        "exchanges_per_1000_lookups_and_10_moves": 1010.0
+      },
+      {
+        "scheme": "prefix_table",
+        "nodes": 50,
+        "busiest_server_utilization": 0.0163,
+        "overloaded": false,
+        "update_exchanges_per_move": 1.0,
+        "mean_exchanges_per_lookup": 1.0,
+        "mean_latency_ms": 0.0938,
+        "p95_latency_ms": 0.1881,
+        "p99_latency_ms": 0.2633,
+        "exchanges_per_1000_lookups_and_10_moves": 1010.0
+      },
+      {
+        "scheme": "prefix_table",
+        "nodes": 500,
+        "busiest_server_utilization": 0.163,
+        "overloaded": false,
+        "update_exchanges_per_move": 1.0,
+        "mean_exchanges_per_lookup": 1.0,
+        "mean_latency_ms": 0.1103,
+        "p95_latency_ms": 0.2211,
+        "p99_latency_ms": 0.3095,
+        "exchanges_per_1000_lookups_and_10_moves": 1010.0
+      },
+      {
+        "scheme": "prefix_table",
+        "nodes": 5000,
+        "busiest_server_utilization": 1.63,
+        "overloaded": true,
+        "update_exchanges_per_move": 1.0,
+        "mean_exchanges_per_lookup": 1.0,
+        "mean_latency_ms": 9.2296,
+        "p95_latency_ms": 18.5069,
+        "p99_latency_ms": 25.9044,
+        "exchanges_per_1000_lookups_and_10_moves": 1010.0
+      },
+      {
+        "scheme": "static_map",
+        "nodes": 5,
+        "busiest_server_utilization": 0.0,
+        "overloaded": false,
+        "update_exchanges_per_move": 50.0,
+        "mean_exchanges_per_lookup": 0.0,
+        "mean_latency_ms": 0.0001,
+        "p95_latency_ms": 0.0002,
+        "p99_latency_ms": 0.0003,
+        "exchanges_per_1000_lookups_and_10_moves": 500.0
+      },
+      {
+        "scheme": "static_map",
+        "nodes": 50,
+        "busiest_server_utilization": 0.0,
+        "overloaded": false,
+        "update_exchanges_per_move": 500.0,
+        "mean_exchanges_per_lookup": 0.0,
+        "mean_latency_ms": 0.0001,
+        "p95_latency_ms": 0.0002,
+        "p99_latency_ms": 0.0003,
+        "exchanges_per_1000_lookups_and_10_moves": 5000.0
+      },
+      {
+        "scheme": "static_map",
+        "nodes": 500,
+        "busiest_server_utilization": 0.0,
+        "overloaded": false,
+        "update_exchanges_per_move": 5000.0,
+        "mean_exchanges_per_lookup": 0.0,
+        "mean_latency_ms": 0.0001,
+        "p95_latency_ms": 0.0002,
+        "p99_latency_ms": 0.0003,
+        "exchanges_per_1000_lookups_and_10_moves": 50000.0
+      },
+      {
+        "scheme": "static_map",
+        "nodes": 5000,
+        "busiest_server_utilization": 0.0,
+        "overloaded": false,
+        "update_exchanges_per_move": 50000.0,
+        "mean_exchanges_per_lookup": 0.0,
+        "mean_latency_ms": 0.0001,
+        "p95_latency_ms": 0.0002,
+        "p99_latency_ms": 0.0003,
+        "exchanges_per_1000_lookups_and_10_moves": 500000.0
+      }
+    ]
+  }
+}

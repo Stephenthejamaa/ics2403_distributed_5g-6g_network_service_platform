@@ -1,0 +1,4 @@
+policy,load_balance_jain_index,mean_distance_rtt_ms,urllc_mean_distance_rtt_ms,max_node_utilization,rejected_processes
+round_robin,0.885,9.37,9.62,0.953,0
+least_loaded,0.982,13.63,20.25,0.745,0
+location_aware,0.93,10.03,3.12,0.865,0
